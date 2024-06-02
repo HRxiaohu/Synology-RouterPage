@@ -1,5 +1,5 @@
 <template>
-  <div class="more-content">您可在此编写任意内容</div>
+  <div class="more-content">Have a nice Day~</div>
 </template>
 
 <style lang="scss" scoped>
@@ -10,5 +10,7 @@
   margin-top: 20px;
   width: 100%;
   height: 100%;
+  font-size: 3rem;
+  font-family: "Pacifico-Regular";
 }
 </style>
