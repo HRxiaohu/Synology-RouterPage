@@ -4,7 +4,10 @@
     <!-- Logo -->
     <div class="logo">
       <img class="logo-img" :src="siteLogo" alt="logo" />
-      <div :class="{ name: true, 'text-hidden': true, long: siteUrl[0].length >= 6 }" style="margin-top: 1.5rem;">
+      <div
+        :class="{ name: true, 'text-hidden': true, long: siteUrl[0].length >= 6 }"
+        style="margin-top: 1.5rem"
+      >
         <span class="bg">{{ siteUrl[0] }}</span>
         <span class="sm"></span>
       </div>
@@ -40,7 +43,7 @@ const store = mainStore();
 const siteLogo = import.meta.env.VITE_SITE_MAIN_LOGO;
 // 站点链接
 const siteUrl = computed(() => {
-  const url = "hrxiaohu"
+  const url = "HRxiaohu";
   return url.split(".");
 });
 
@@ -111,9 +114,20 @@ watch(
         }
       }
     }
+    @media (max-width: 1000px) {
+      .logo-img {
+        display: none;
+      }
+      .name {
+        height: 128px;
+        .bg {
+          font-size: 4.5rem;
+        }
+      }
+    }
     @media (max-width: 768px) {
       .logo-img {
-        width: 100px;
+        display: none;
       }
       .name {
         height: 128px;
@@ -125,7 +139,8 @@ watch(
 
     @media (max-width: 720px) {
       max-width: 100%;
-    }
+    }    
+
   }
 
   .description {
@@ -172,7 +187,7 @@ watch(
         transform: none;
         text-align: center;
         .bg {
-          align-self:center;
+          align-self: center;
           font-size: 4rem;
         }
         .sm {

@@ -20,7 +20,7 @@ const store = mainStore();
 
 // 站点链接
 const siteUrl = computed(() => {
-  const url = "hrxiaohu";
+  const url = "HRxiaohu";
   return url.split(".");
 });
 </script>
