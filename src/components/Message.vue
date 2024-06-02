@@ -6,7 +6,7 @@
       <img class="logo-img" :src="siteLogo" alt="logo" />
       <div :class="{ name: true, 'text-hidden': true, long: siteUrl[0].length >= 6 }">
         <span class="bg">{{ siteUrl[0] }}</span>
-        <span class="sm">.{{ siteUrl[1] }}</span>
+        <span class="sm"></span>
       </div>
     </div>
     <!-- 简介 -->
@@ -30,23 +30,17 @@
 </template>
 
 <script setup>
-import { Icon } from "@vicons/utils";
-import { QuoteLeft, QuoteRight } from "@vicons/fa";
-import { Error } from "@icon-park/vue-next";
 import { mainStore } from "@/store";
+import { Error } from "@icon-park/vue-next";
+import { QuoteLeft, QuoteRight } from "@vicons/fa";
+import { Icon } from "@vicons/utils";
 const store = mainStore();
 
 // 主页站点logo
 const siteLogo = import.meta.env.VITE_SITE_MAIN_LOGO;
 // 站点链接
 const siteUrl = computed(() => {
-  const url = import.meta.env.VITE_SITE_URL;
-  if (!url) return "imsyy.top".split(".");
-  // 判断协议前缀
-  if (url.startsWith("http://") || url.startsWith("https://")) {
-    const urlFormat = url.replace(/^(https?:\/\/)/, "");
-    return urlFormat.split(".");
-  }
+  const url = "HRxiaohu"
   return url.split(".");
 });
 
@@ -106,7 +100,7 @@ watch(
       font-family: "Pacifico-Regular";
 
       .bg {
-        font-size: 5rem;
+        font-size: 4rem;
       }
 
       .sm {
