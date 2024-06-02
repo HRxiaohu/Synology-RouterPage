@@ -40,7 +40,7 @@ const store = mainStore();
 const siteLogo = import.meta.env.VITE_SITE_MAIN_LOGO;
 // 站点链接
 const siteUrl = computed(() => {
-  const url = "HRxiaohu"
+  const url = "hrxiaohu"
   return url.split(".");
 });
 
@@ -173,7 +173,7 @@ watch(
         text-align: center;
         .bg {
           align-self:center;
-          font-size: 3.5rem;
+          font-size: 4rem;
         }
         .sm {
           font-size: 1.4rem;
